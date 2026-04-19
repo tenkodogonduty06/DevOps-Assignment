@@ -12,16 +12,13 @@ int main(int argc, char* argv[]) {
 
     XMLDocument doc;
 
-    // Load file from command line
     if (doc.LoadFile(argv[1]) != XML_SUCCESS) {
         cout << "Failed to load XML file." << endl;
         return 1;
     }
 
-    // Get <catalog>
     XMLElement* catalog = doc.FirstChildElement("catalog");
 
-    // Loop through all <book> elements
     for (XMLElement* book = catalog->FirstChildElement("book");
         book != nullptr;
         book = book->NextSiblingElement("book")) {
