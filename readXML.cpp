@@ -5,6 +5,9 @@ using namespace tinyxml2;
 using namespace std;
 
 int main(int argc, char* argv[]) {
+
+    int test;
+    
     if (argc < 2) {
         cout << "Usage: " << argv[0] << " <xml file>" << endl;
         return 1;
